@@ -1,9 +1,10 @@
 # iFoundAPIs
 
-Python wrappers to APIs that I found from different places. These APIs may or may not work due to obvious reasons.
+Python wrappers to APIs that I found from different places. These APIs may or may not work due to obvious reasons. 
+
+These APIs I wrap maybe public apis but doesn't have an direct python wrapper, private apis ( including that will give unrestricted access for premium/paid content).
 
 Also if you are the owner of the API, please don't sue me instead fix it from your side, I'm just learning nothing more than that just having some fun.
-
 
 | Application Name | Wrapper Name | Available Methods | Active/Inactive | Last Checked Date |
 | :--------------: | :----------: | :---------------: | :-------------: | :---------------: |
