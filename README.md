@@ -6,7 +6,7 @@ These APIs I wrap maybe public apis but doesn't have an direct python wrapper or
 
 Also if you are the owner of the API, please don't sue me instead fix it from your side, I'm just learning nothing more than that just having some fun.
 
-| Application Name | Wrapper Name | Available Methods | Active/Inactive | Last Checked Date |
-| :--------------: | :----------: | :---------------: | :-------------: | :---------------: |
-|     Symbolab     | SymbolabAPI |   Symbolab, api   |     Active     |     4/11/2024     |
-|     PhotoLab     | PhotoLabAPI |                  |                |                  |
+| Application Name | Wrapper Name |                     Available Methods                     | Active/Inactive/InComplete | Last Checked Date |
+| :--------------: | :----------: | :-------------------------------------------------------: | :------------------------: | :---------------: |
+|     Symbolab     | SymbolabAPI |                       Symbolab, api                       |           Active           |     4/11/2024     |
+|     PhotoLab     | PhotoLabAPI | default_configs,<br />upload_image,<br />trending_filters |        InCompelete        |                  |
