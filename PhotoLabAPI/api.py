@@ -22,3 +22,49 @@ def upload_image(file):
     else:
         print("Upload Fail!")
         return json.loads(response.text)
+    
+def trending_filters():
+    params = {
+      "idfa": "",
+      "app_id": 1,
+      "aid": "214c711bbb764b38205cdf206c98ce46",
+      "plid": "83293f35-8454-43b5-b513-2b816cb10389",
+      "config_id": "hk-1104241601",
+      "config_dt": "2024-04-11T16%3A03%3A52",
+      "session_idx": 3,
+      "param5": 0,
+      "param6": 44287720,
+      "last_tab": "compositions",
+      "photo_chooser_id": 2,
+      "processing_ad_idx": 0,
+      "postprocessing_ad_idx": 0,
+      "smart_fs": -1,
+      "icu": 0,
+      "installer": "",
+      "is_low": 1,
+      "ishk": 1,
+      "af_uid": "1712993725956-3116072534899486430",
+      "th_fab_shape": "rounded",
+      "th_fab_bg": "D3E3FF",
+      "th_fab_ic": "001C3B",
+      "th_primary": "005FB1",
+      "cc": 1,
+      "ccb": "h"
+    }
+    
+    url = f"{API_1_URL}/channel/photolab"
+
+    headers = {
+        'Host': SOCIAL_API_URL,
+        'User-Agent': USER_AGENT,
+        'Accept': 'application/json',
+        'Accept-Encoding': 'gzip, deflate, br',
+        'Connection': 'close'
+    }
+
+    try:
+      response = requests.get(url, params=params+default_configs(), headers=headers)
+      response.raise_for_status()  # Raise an exception for non-2xx status codes
+      print(response.text)
+    except requests.exceptions.RequestException as e:
+      print(f"Error fetching trending filters: {e}")
