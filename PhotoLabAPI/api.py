@@ -63,8 +63,50 @@ def trending_filters():
     }
 
     try:
-      response = requests.get(url, params=params+default_configs(), headers=headers)
+      response = requests.get(url, params=params.update(default_configs()), headers=headers)
       response.raise_for_status()  # Raise an exception for non-2xx status codes
       print(response.text)
     except requests.exceptions.RequestException as e:
       print(f"Error fetching trending filters: {e}")
+
+def recent_filters():
+    params = {
+      "idfa": "",
+      "app_id": 1,
+      "aid": "214c711bbb764b38205cdf206c98ce46",
+      "plid": "83293f35-8454-43b5-b513-2b816cb10389",
+      "config_id": "hk-1504241451",
+      "config_dt": "2024-04-15T14%3A52%3A02",
+      "session_idx": 6,
+      "param5": 0,
+      "param6": 224621041,
+      "last_tab": "compositions",
+      "photo_chooser_id": 13,
+      "processing_ad_idx": 0,
+      "postprocessing_ad_idx": 0,
+      "smart_fs": -1,
+      "icu": 0,
+      "installer": "",
+      "is_low": 1,
+      "ishk": 1,
+      "af_uid": "1712993725956-3116072534899486430",
+      "th_fab_shape": "rounded",
+      "th_fab_bg": "D3E3FF",
+      "th_fab_ic": "001C3B",
+      "th_primary": "005FB1",
+      "cc": 1,
+      "ccb": "h"
+    }
+    url = f"{API_1_URL}/channel/photolab/recent/all"
+    headers = {
+      'Host': SOCIAL_API_URL,
+      'User-Agent': USER_AGENT,
+      'Accept': 'application/json',
+      'Accept-Encoding': 'gzip, deflate, br'
+    }
+    try:
+        response = requests.get(url, params=params.update(default_configs()), headers=headers)
+        response.raise_for_status()  # Raise an exception for non-2xx status codes
+        print(response.text)
+    except requests.exceptions.RequestException as e:
+        print(f"Error fetching recent filters: {e}")
