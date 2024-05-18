@@ -1,3 +1,4 @@
+
 # iFoundAPIs
 
 Python wrappers to APIs that I found from different places. These APIs may or may not work due to obvious reasons.
@@ -9,4 +10,5 @@ Also if you are the owner of the API, please don't sue me instead fix it from yo
 | Application Name | Wrapper Name |                               Available Methods                               | Active/Inactive/InComplete | Last Checked Date |
 | :--------------: | :----------: | :----------------------------------------------------------------------------: | :------------------------: | :---------------: |
 |     Symbolab     | SymbolabAPI |                                 Symbolab, api                                 |           Active           |     4/11/2024     |
-|     PhotoLab     | PhotoLabAPI | default_configs,<br />upload_image,<br />trending_filters,<br />recent_filters |        InCompelete        |                  |
+|     PhotoLab     | PhotoLabAPI | default_configs,<br />upload_image,<br />trending_filters,<br />recent_filters |        InCompelete        |    -              |
+|     Mathsbot.com     | MathsbotAPI | generate_random_questions, print_all_topic_ids, get_all_topic_ids |        Active        |          It'll work forever since it's offline       |
